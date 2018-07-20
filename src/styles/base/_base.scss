@@ -1,0 +1,39 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+    background: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+header {
+    min-width: 65%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 5px;
+    background: #6f6f9f;
+    color:white;
+}
+
+header > a {
+    margin: 0 5px;
+}
+
+header >a:visited {
+    color: white;
+}
+
+.is-active {
+    font-weight: bold;
+}
+
