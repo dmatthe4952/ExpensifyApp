@@ -6,12 +6,13 @@ import {Link} from 'react-router-dom';
 import numeral from 'numeral';
 
 
-export const ExpenseListItem = ({dispatch, description, id, amount, createdAt}) => {
+export const ExpenseListItem = ({dispatch, description, id, amount, createdAt, note}) => {
     return (
         <div>
             <span><Link to={`/edit/${id}`}>{description}</Link></span>
-            <span>{amount}</span>
+            <span>{numeral(amount / 100).format('$0,0.00')}</span>
             <span>{moment(createdAt).format("MM/DD/YYYY")}</span>
+            <span>{note}</span>
             <span><button onClick={(e)=>{
                 dispatch(removeExpense({id}));
             }}>

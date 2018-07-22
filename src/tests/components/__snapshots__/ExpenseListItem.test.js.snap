@@ -11,10 +11,13 @@ exports[`should render ExpenseListItem using fixture data 1`] = `
     </Link>
   </span>
   <span>
-    20000
+    $200.00
   </span>
   <span>
     12/30/1969
+  </span>
+  <span>
+    note 2
   </span>
   <span>
     <button
