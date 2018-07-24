@@ -2,22 +2,22 @@ import moment from 'moment';
 export default [
     {
         id: 1,
-        description: "First expense",
-        amount: 10000,
+        description: "Gum",
+        amount: 195,
         createdAt: moment(0),
         note: "note 1"
     },
     {
         id: 2,
-        description: "Second expense bill",
-        amount: 20000,
+        description: "Rent",
+        amount: 109500,
         createdAt: moment(0).subtract(1,'day').valueOf(),
-        note: "note 2"
+        note: "February Rent"
     },
     {
         id: 3,
-        description: "Third expense bill",
-        amount: 30000,
+        description: "Credit Card",
+        amount: 4500,
         createdAt: moment(0).add(1,'day').valueOf(),
         note: "note 3"
     }

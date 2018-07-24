@@ -72,7 +72,7 @@ test('should call spy function', ()=>{
         description: expenses[0].description,
         amount: expenses[0].amount,
         note: expenses[0].note,
-        createdAt: expenses[0].createdAt
+        createdAt: expenses[0].createdAt.valueOf()
     });
 });
 

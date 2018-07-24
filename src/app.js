@@ -8,8 +8,8 @@ import {setTextFilter, setStartDate, setEndDate, sortByDate, sortByAmount} from 
 import getVisibleExpeses from './selectors/expenses';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-import 'react-dates/lib/css/_datepicker.css'
-import moment from 'moment';
+import 'react-dates/lib/css/_datepicker.css';
+import './firebase/firebase';
 
 const store = configureStore();
 const jsx = (

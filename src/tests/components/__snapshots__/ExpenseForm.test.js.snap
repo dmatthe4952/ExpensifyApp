@@ -130,7 +130,7 @@ exports[`should render ExpenseForm with test data 1`] = `
       onChange={[Function]}
       placeholder="Description"
       type="text"
-      value="Third expense bill"
+      value="Credit Card"
     />
      
     <br />
@@ -138,7 +138,7 @@ exports[`should render ExpenseForm with test data 1`] = `
       onChange={[Function]}
       placeholder="Amount"
       type="text"
-      value={300}
+      value={45}
     />
      
     <br />

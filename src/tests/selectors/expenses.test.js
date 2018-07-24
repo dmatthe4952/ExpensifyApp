@@ -5,7 +5,7 @@ import expenses from '../fixtures/expenses';
 test('should filter by text value',()=>{
     const result = 
     selectExpenses(expenses,{
-        text:"first",
+        text:"gum",
         sortBy:"date",
         startDate:undefined,
         endDate:undefined
@@ -34,7 +34,7 @@ test('should select everything and sort expenses by given amount key if no text 
         startdate:undefined,
         endDate:undefined
     });
-    expect(result).toEqual([expenses[2], expenses[1],expenses[0]]);
+    expect(result).toEqual([expenses[1], expenses[2],expenses[0]]);
 });
 
 test('should select expenses with createdBy greater than given start date',()=>{

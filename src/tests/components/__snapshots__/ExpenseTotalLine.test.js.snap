@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render ExpenseTotalLine 1`] = `
+<div>
+  <p>
+    You are viewing 
+    3
+     expenses, totaling 
+    $1,141.95
+    .
+  </p>
+</div>
+`;
+
+exports[`should render ExpenseTotalLine 2`] = `
+<div>
+  <p />
+</div>
+`;

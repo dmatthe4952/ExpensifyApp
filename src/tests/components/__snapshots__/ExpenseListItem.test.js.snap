@@ -7,17 +7,17 @@ exports[`should render ExpenseListItem using fixture data 1`] = `
       replace={false}
       to="/edit/2"
     >
-      Second expense bill
+      Rent
     </Link>
   </span>
   <span>
-    $200.00
+    $1,095.00
   </span>
   <span>
     12/30/1969
   </span>
   <span>
-    note 2
+    February Rent
   </span>
   <span>
     <button
