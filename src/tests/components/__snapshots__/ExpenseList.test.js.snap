@@ -2,37 +2,59 @@
 
 exports[`should render ExpenseList with empty message 1`] = `
 <div>
-  <p>
-    No Expenses
-  </p>
+  <Table
+    bordered={false}
+    bsClass="table"
+    condensed={false}
+    hover={false}
+    responsive={false}
+    striped={true}
+  >
+    <tbody>
+      <p>
+        No Expenses
+      </p>
+    </tbody>
+  </Table>
 </div>
 `;
 
 exports[`should render ExpenseList with expenses 1`] = `
 <div>
-  <Connect(ExpenseListItem)
-    amount={195}
-    createdAt={0}
-    description="Gum"
-    id={1}
-    key="0"
-    note="note 1"
-  />
-  <Connect(ExpenseListItem)
-    amount={109500}
-    createdAt={-86400000}
-    description="Rent"
-    id={2}
-    key="1"
-    note="February Rent"
-  />
-  <Connect(ExpenseListItem)
-    amount={4500}
-    createdAt={86400000}
-    description="Credit Card"
-    id={3}
-    key="2"
-    note="note 3"
-  />
+  <Table
+    bordered={false}
+    bsClass="table"
+    condensed={false}
+    hover={false}
+    responsive={false}
+    striped={true}
+  >
+    <tbody>
+      <Connect(ExpenseListItem)
+        amount={195}
+        createdAt={0}
+        description="Gum"
+        id={1}
+        key="0"
+        note="note 1"
+      />
+      <Connect(ExpenseListItem)
+        amount={109500}
+        createdAt={-86400000}
+        description="Rent"
+        id={2}
+        key="1"
+        note="February Rent"
+      />
+      <Connect(ExpenseListItem)
+        amount={4500}
+        createdAt={86400000}
+        description="Credit Card"
+        id={3}
+        key="2"
+        note="note 3"
+      />
+    </tbody>
+  </Table>
 </div>
 `;

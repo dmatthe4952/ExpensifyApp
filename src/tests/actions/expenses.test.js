@@ -118,7 +118,12 @@ test('should return data from state',()=>{
         ...expenses[0]
     });
 
-    state.dispatch(startSetExpenses()).then(()=>{
+    state.dispatch(startSetExpenses()).then((done)=>{
         const action = getActions()[0];
+        expect(action).toEqual({
+            type: 'SET_EXPENSES',
+            expenses
+        })
+        done();
     })
 });

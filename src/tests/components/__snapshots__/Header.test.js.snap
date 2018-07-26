@@ -5,7 +5,7 @@ exports[`should render Header correctly 1`] = `
   className="header"
 >
   <h1>
-    Expensify
+    Track My Spending
   </h1>
   <NavLink
     activeClassName="is-active"
