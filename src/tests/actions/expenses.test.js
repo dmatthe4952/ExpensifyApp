@@ -1,4 +1,10 @@
-import { startAddExpense, addExpense, removeExpense, editExpense} from '../../actions/expenses';
+import { 
+    setExpenses,
+    startSetExpenses,
+    startAddExpense, 
+    addExpense, 
+    removeExpense, 
+    editExpense} from '../../actions/expenses';
 import moment from  'moment';
 import uuid from 'uuid';
 import expenses from '../fixtures/expenses';
@@ -8,6 +14,14 @@ import database from '../../firebase/firebase';
 
 
 const mockStore = configureStore([thunk]);
+
+beforeEach((done)=>{
+    const expensesData = {};
+    expenses.forEach(({id,description,note,amount,createdAt})=>{
+        expensesData[id] = {description,note,amount,createdAt};
+    });
+    database.ref('expenses').set(expensesData).then(()=>{done()});
+});
 
 
 test('should setup removeExpense obect', ()=>{
@@ -87,4 +101,24 @@ test('should add expense with defaults to database and store', (done)=>{
             done();
         })
     });
+});
+
+test('should setup set expense object with data',()=>{
+     const result = setExpenses(expenses);
+
+     expect(result).toEqual({
+         type:'SET_EXPENSES',
+         expenses
+     })
+});
+
+test('should return data from state',()=>{
+    const state = mockStore({
+        id:'123abcd',
+        ...expenses[0]
+    });
+
+    state.dispatch(startSetExpenses()).then(()=>{
+        const action = getActions()[0];
+    })
 });

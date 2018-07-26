@@ -4,7 +4,7 @@ export default [
         id: 1,
         description: "Gum",
         amount: 195,
-        createdAt: moment(0),
+        createdAt: moment(0).valueOf(),
         note: "note 1"
     },
     {

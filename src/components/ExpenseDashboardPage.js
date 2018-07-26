@@ -5,7 +5,7 @@ import ExpenseTotalLine from './ExpenseTotalLine';
 
 const ExpenseDashboardPage = () => (
     <div>
-        <ExpenseListFilters />
+        <ExpenseListFilters />        
         <ExpenseTotalLine />
         <ExpenseList />
     </div>
