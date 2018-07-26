@@ -1,11 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Table} from 'react-bootstrap';
 import ExpenseListItem from './ExpenseListItem';
 import selectExpenses from '../selectors/expenses';
 
 export const ExpenseList = (props) => (
     <div>
-    <table><tbody>
+    <Table striped ><tbody>
     {
         props.expenses.length === 0 ? (
             <p>No Expenses</p>
@@ -16,7 +17,7 @@ export const ExpenseList = (props) => (
             })
         )
     }
-    </tbody></table>
+    </tbody></Table>
     </div>
 );
 
