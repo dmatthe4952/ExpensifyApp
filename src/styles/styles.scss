@@ -1,6 +1,10 @@
 @import './base/settings';
 @import './base/base';
 
-span {
-    margin-left: 30px;
+table {
+    padding: 30px;
+}
+td {
+    height: 30px;
+    width: 90px;
 }

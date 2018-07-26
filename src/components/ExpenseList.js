@@ -5,15 +5,18 @@ import selectExpenses from '../selectors/expenses';
 
 export const ExpenseList = (props) => (
     <div>
+    <table><tbody>
     {
         props.expenses.length === 0 ? (
             <p>No Expenses</p>
         ) : (
+            
             props.expenses.map((expense, index)=> { 
                 return <ExpenseListItem key={index} {...expense}/>;
             })
         )
     }
+    </tbody></table>
     </div>
 );
 
