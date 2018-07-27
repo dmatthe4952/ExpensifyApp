@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render EditExpensePage correctly 1`] = `
-<div>
+<div
+  id="edit"
+>
   <ExpenseForm
     expense={
       Object {
         "amount": 109500,
         "createdAt": -86400000,
         "description": "Rent",
-        "id": 2,
+        "id": "2",
         "note": "February Rent",
       }
     }

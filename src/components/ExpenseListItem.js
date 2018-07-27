@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import moment from 'moment';
-import {removeExpense} from '../actions/expenses';
+import {startRemoveExpense} from '../actions/expenses';
 import {Link} from 'react-router-dom';
 import numeral from 'numeral';
 
@@ -14,7 +14,7 @@ export const ExpenseListItem = ({dispatch, description, id, amount, createdAt, n
             <td>{moment(createdAt).format("MM/DD/YYYY")}</td>
             <td>{note}</td>
             <td><button onClick={(e)=>{
-                dispatch(removeExpense({id}));
+                dispatch(startRemoveExpense({id}));
             }}>
             Remove</button></td>
         </tr>

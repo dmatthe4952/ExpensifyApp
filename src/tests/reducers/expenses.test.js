@@ -33,7 +33,7 @@ test('should not remove an expense if id not found',()=>{
 test('EDIT_EXPENSE action should modify expense with id given',()=>{   
     const action = {
         type:'EDIT_EXPENSE',
-        id: 3,
+        id: "3",
         updates: {
             description: "Edited Bill",
             amount: 25000,                  
@@ -42,7 +42,7 @@ test('EDIT_EXPENSE action should modify expense with id given',()=>{
 
     const state = expensesReducer(expenses,action);
     expect(state[2]).toEqual({
-        id: 3,
+        id: "3",
         description: "Edited Bill",
         amount: 25000,
         createdAt: moment(0).add(1,'day').valueOf(),

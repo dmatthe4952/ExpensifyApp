@@ -30,43 +30,53 @@ export const startAddExpense = (expenseData={}) => {
 };
 
 //REMOVE_EXPENSE
-export const removeExpense = ({id}) => {
-    return {
-        type: 'REMOVE_EXPENSE',
-        id        
-    }
-};
+export const removeExpense = ({id}={}) => ({
+    type: 'REMOVE_EXPENSE',
+    id:id    
+});
 
-//EDIT_EXPENSE
-export const editExpense = (id, updates) => {
-    return {
-    type: 'EDIT_EXPENSE',
-    id,
-    updates
-    }
-};
-
-//SET_EXPENSES
-export const setExpenses = (expenses)=>{
-    return {
-        type: 'SET_EXPENSES',
-        expenses 
-    }
-};
-
-export const startSetExpenses = ()=>{
-    return (dispatch) => {
-        let expenses = [];
-        return database.ref('expenses').once('value',(snapshot)=>{
-            snapshot.forEach((childSnapshot)=>{
-                expenses.push({
-                    id: childSnapshot.key,
-                    ...childSnapshot.val() 
-                }
-                );
-            });
-            dispatch(setExpenses(expenses));
+export const startRemoveExpense = ({id}={})=>{
+    return (dispatch)=>{
+        return database.ref(`expenses/${id}`).remove().then(() => {
+            dispatch(removeExpense({id}));
         });
     };
 };
 
+//EDIT_EXPENSE
+export const editExpense = (id, updates) => ({
+    type: 'EDIT_EXPENSE',
+    id,
+    updates
+});
+
+export const startEditExpense = (id,updates)=>{
+    return (dispatch)=>{
+        return database.ref(`expenses/${id}`).update(updates).then(() => {
+            dispatch(editExpense(id,updates));
+        });
+    };
+
+
+};
+
+//SET_EXPENSES
+export const setExpenses = (expenses)=>({
+    type: 'SET_EXPENSES',
+    expenses 
+});
+
+export const startSetExpenses = ()=>{
+    return (dispatch) => {
+        return database.ref('expenses').once('value',(snapshot)=>{
+            const expenses = [];
+            snapshot.forEach((childSnapshot)=>{
+                expenses.push({
+                    id: childSnapshot.key,
+                    ...childSnapshot.val() 
+                });
+            });
+            dispatch(setExpenses(expenses));
+        })
+    };
+};
