@@ -2,20 +2,9 @@
 
 exports[`should render ExpenseList with empty message 1`] = `
 <div>
-  <Table
-    bordered={false}
-    bsClass="table"
-    condensed={false}
-    hover={false}
-    responsive={false}
-    striped={true}
-  >
-    <tbody>
-      <p>
-        No Expenses
-      </p>
-    </tbody>
-  </Table>
+  <p>
+    No Expenses
+  </p>
 </div>
 `;
 

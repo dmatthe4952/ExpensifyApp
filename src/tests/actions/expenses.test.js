@@ -25,8 +25,8 @@ beforeEach((done)=>{
 
 
 test('should setup removeExpense obect', ()=>{
-    const result = (removeExpense({id:1}));
-    expect(result).toEqual({
+    const action = (removeExpense({id:1}));
+    expect(action).toEqual({
         type:'REMOVE_EXPENSE',
         id:1
     });

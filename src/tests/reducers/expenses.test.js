@@ -1,7 +1,6 @@
 import moment from 'moment';
 import expensesReducer from '../../reducers/expenses';
 import expenses from '../fixtures/expenses';
-import { setExpenses } from '../../actions/expenses';
 
 test('should setup the default state',()=>{
     const state = expensesReducer(undefined,{type:'@@init'});
