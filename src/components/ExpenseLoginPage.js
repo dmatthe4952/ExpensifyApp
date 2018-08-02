@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { startLogin } from '../actions/auth';
 
 export const ExpenseLoginPage  = ({startLogin}) => (
-    <div>
+    <div className="container">
         <button onClick={startLogin} >Login</button>
     </div>
 );
