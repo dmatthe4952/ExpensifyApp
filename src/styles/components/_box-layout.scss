@@ -1,0 +1,26 @@
+
+
+.box-layout {
+    align-items: center;
+    background: url('/images/dollar-2584746_1920.jpg');
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.box-layout__box {
+    background: fade-out(white, .15);
+    border-radius: 4px;
+    text-align: center;
+    padding: 3.2rem, 4.6rem;
+    width: 25rem;
+}
+
+.box-layout__box__title {
+    margin-top: 0;
+    background-color: $dark-grey;
+    padding-top: 3px;
+    color: #dfdfdf;
+}
