@@ -11,14 +11,17 @@ export const ExpenseList = (props) => (
             <div className="show-for-larger">Expense</div>
             <div className="show-for-larger">Amount</div>
         </div>
-
-    {
-        props.expenses.length === 0 ? (
-            <p>No Expenses</p>
-        ) : 
-        (props.expenses.map((expense, index) => 
-        (<ExpenseListItem key={index} {...expense}/>))) 
-    }
+        <div className="list-body">
+            {
+                props.expenses.length === 0 ? (
+                    <div className='list-item list-item--message'>
+                    <span>No Expenses</span>
+                    </div>
+                ) : 
+                (props.expenses.map((expense, index) => 
+                (<ExpenseListItem key={index} {...expense}/>))) 
+            }
+        </div>
     </div>
 );
 

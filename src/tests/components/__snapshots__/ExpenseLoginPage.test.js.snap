@@ -2,10 +2,24 @@
 
 exports[`Should display the Login Page correctly 1`] = `
 <div
-  className="container"
+  className="box-layout"
 >
-  <button>
-    Login
-  </button>
+  <div
+    className="box-layout__box"
+  >
+    <h1
+      className="box-layout__box__title"
+    >
+      Track My Spending
+    </h1>
+    <p>
+      Keep your spending under control by tracking your spending habits.
+    </p>
+    <button
+      id="login-button"
+    >
+      Login with Google
+    </button>
+  </div>
 </div>
 `;

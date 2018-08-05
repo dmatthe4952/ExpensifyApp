@@ -27,15 +27,35 @@
     }
 }
 
+.list-body {
+    margin-bottom: $m-size;
+    @media (min-width: $desktop-breakpoint) {
+        margin-bottom: $l-size;
+    }
+}
+
+.list-item--message {
+    align-items: center;
+    justify-content: center;
+    color: $grey;
+    padding: $m-size;
+    transition: none;
+    &:hover {
+        background: none;
+    }
+}
+
 .list-item__title {
-    margin: 0 0 $s-size 0;
+    margin: 0;
+    word-break: break-all;
 }
 
 .list-item__sub-title {
-    margin: 0 0 $s-size 0;
+    font-size: $s-size-font;
+    color: $grey;
 }
 
 .list-item__data {
-    margin: 0 0 $s-size 0;
+    margin: 0 0 0 $s-size;
 }
 

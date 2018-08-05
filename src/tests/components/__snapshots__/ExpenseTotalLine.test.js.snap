@@ -1,19 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render ExpenseTotalLine 1`] = `
-<div>
-  <p>
-    You are viewing 
-    3
-     expenses, totaling 
-    $1,141.95
-    .
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      You are viewing 
+      <span />
+       
+      expenses
+      , totaling 
+      <span>
+        $0.00
+      </span>
+      .
+    </h1>
+    <div>
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`should render ExpenseTotalLine 2`] = `
-<div>
-  <p />
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      You are viewing 
+      <span />
+       
+      expenses
+      , totaling 
+      <span>
+        $0.00
+      </span>
+      .
+    </h1>
+    <div>
+      <Link
+        className="button"
+        replace={false}
+        to="/create"
+      >
+        Add Expense
+      </Link>
+    </div>
+  </div>
 </div>
 `;
