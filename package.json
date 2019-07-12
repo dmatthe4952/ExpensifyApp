@@ -58,5 +58,14 @@
     "jest": "^23.4.1",
     "react-test-renderer": "^16.4.1",
     "webpack-dev-server": "3.1.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmatthe4952/ExpensifyApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dmatthe4952/ExpensifyApp/issues"
+  },
+  "homepage": "https://github.com/dmatthe4952/ExpensifyApp#readme",
+  "description": ""
 }
