@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'test') {
 module.exports = (env) => {
     const isProduction = env === "production";
     const CSSExtract = new ExtractTextPlugin('styles.css');
- 
+
     return {
         entry: ['babel-polyfill','./src/app.js'],
         output: {
@@ -33,7 +33,7 @@ module.exports = (env) => {
                     test: /\.s?css$/,
                     use: CSSExtract.extract(
                         {
-                        use: 
+                        use:
                             [
                                 {
                                     loader: 'css-loader',
@@ -70,6 +70,6 @@ module.exports = (env) => {
                 'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID)
             })
         ]
-    
+
     }
 };
