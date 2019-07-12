@@ -13,5 +13,5 @@ app.get('*', (req, res)=>{
 });
 
 app.listen(port,()=>{
-    console.log('Sever running');
+    console.log('Sever running port: '+port);
 });
