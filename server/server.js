@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+// require('dotenv').config();
 
 const path = require('path');
 const publicPath = path.join(__dirname,'..','public');
@@ -13,5 +14,6 @@ app.get('*', (req, res)=>{
 });
 
 app.listen(port,()=>{
-    console.log('Sever running port: '+port);
+    console.log('Sever running port: ' + port);
+    console.log(process.env.FIREBASE_API_KEY)
 });

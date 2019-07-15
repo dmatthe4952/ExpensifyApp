@@ -5,7 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 //process.env.NODE_ENV
 
-
+console.log("NODE_ENV = " + process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'test') {
     require('dotenv').config({path:'.env.test'});
 } else if (process.env.NODE_ENV === 'development') {
@@ -70,6 +70,5 @@ module.exports = (env) => {
                 'process.env.FIREBASE_MESSAGING_SENDER_ID': JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID)
             })
         ]
-
     }
 };
