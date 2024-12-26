@@ -26,7 +26,7 @@
     "dotenv-webpack": "^1.7.0",
     "express": "^4.16.3",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "firebase": "9.15.0",
+    "firebase": "10.9.0",
     "history": "4.7.2",
     "istanbul-api": "^2.1.6",
     "jest-cli": "^29.3.1",
