@@ -30,7 +30,7 @@
     "history": "4.7.2",
     "istanbul-api": "^2.1.6",
     "jest-cli": "^29.3.1",
-    "lodash": "^4.17.21",
+    "lodash": "^4.17.23",
     "mini-css-extract-plugin": "^0.7.0",
     "moment": "2.29.4",
     "normalize.css": "^8.0.0",
