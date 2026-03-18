@@ -1,0 +1,6 @@
+const EXPENSE = {
+    LOAD: "REQUEST_EXPENSE_DATA",
+    LOAD_SUCCESS: "RECEIVE_EXPENSE_DATA",
+};
+
+export default EXPENSE
